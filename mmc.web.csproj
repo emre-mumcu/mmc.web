@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<PackageType>Template</PackageType>
+		<PackageId>mmc.web</PackageId>
+		<PackageVersion>1.0.0</PackageVersion>
+		<TargetFramework>net9.0</TargetFramework>
+		<IsPackable>true</IsPackable>
+		<Title>mmc Web Extensions</Title>
+		<Authors>Emre Mumcu</Authors>
+		<Company>mumcu.net</Company>
+		<Description>An extension package for AspNetCore web applications</Description>
+		<RepositoryUrl>https://github.com/emre-mumcu/mmc.web.git</RepositoryUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageTags>mmc; web; mvc; razor; blazor; aspnetcore;</PackageTags>
+		<Copyright>Copyright © 2024</Copyright>
+		<PackageProjectUrl>https://emre-mumcu.github.io</PackageProjectUrl>
+		<PackageIconUrl>https://emre-mumcu.github.io</PackageIconUrl>
+		<IncludeContentInPack>true</IncludeContentInPack>
+		<IncludeBuildOutput>false</IncludeBuildOutput>
+		<EnableDefaultContentItems>false</EnableDefaultContentItems>
+		<NoDefaultExcludes>true</NoDefaultExcludes>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Content Include="**\**" Exclude="**\bin\**;**\obj\**;**\.vs\**;**\.git\**" />
+		<Content Remove=".gitignore; .gitattributes; editorconfig;" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+</Project>
